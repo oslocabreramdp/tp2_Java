@@ -100,10 +100,27 @@ public class TP_2 {
 
                     ticket1.mostrarInfo3();
 
-
-
                     break;
                 case 4:
+
+                    Cilindro c= new Cilindro();
+
+                    System.out.println(c.toString());
+
+                    System.out.println("El area de la base del cilindro es: "+c.calcularAreaBase());
+
+                    System.out.println("El volumen del Cilindro es:" +c.calcularVolumen());
+
+                    Cilindro c2= new Cilindro(10, "verde", 10);
+
+                    System.out.println(c2.toString());
+
+                    System.out.println("El area de la base del cilindro es: " +c2.calcularAreaBase());
+
+                    System.out.println("El volumen del cilindro es: " +c2.calcularVolumen());
+
+
+
                     break;
                 case 5:
                     break;
