@@ -87,6 +87,21 @@ public class TP_2 {
 
                     break;
                 case 3:
+
+                    Cliente cliente1= new Cliente("Oslo", "oslo.mdp@gmail.com",20);
+
+                    System.out.println(cliente1.toString());
+
+                    Factura ticket1= new Factura(cliente1,150000);
+
+                    System.out.println(ticket1.toString());
+
+                    System.out.println("El cliente debera pagar: $" +ticket1.montoACobrar() );
+
+                    ticket1.mostrarInfo3();
+
+
+
                     break;
                 case 4:
                     break;
