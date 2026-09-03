@@ -1,18 +1,18 @@
-public class Libro extends Autor {
+import java.util.Objects;
+
+public class Libro {
 
 
     private String titulo;
     private double precio;
     private int stock;
+    private Autor autor;
 
-    public Libro(String nombre, String apellido, String mail, char genero, String titulo, double precio, int stock) {
-        super(nombre, apellido, mail, genero);
+    public Libro(String titulo, double precio, int stock, Autor autor) {
         this.titulo = titulo;
         this.precio = precio;
         this.stock = stock;
-    }
-
-    public Libro() {
+        this.autor = autor;
     }
 
     public String getTitulo() {
@@ -37,5 +37,27 @@ public class Libro extends Autor {
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "titulo='" + titulo + '\'' +
+                ", precio=" + precio +
+                ", stock=" + stock +
+                ", autor=" + autor +
+                '}';
+    }
+
+    public String mostrarInfoConsigna(){
+        return "El libro, " + titulo + " de " + getAutor().getApellido() + " " + getAutor().getNombre() + ". Se vende a " +precio+" pesos.";
     }
 }

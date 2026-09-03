@@ -16,6 +16,8 @@ public class TP_2 {
                     double salario;
                     String nombre;
 
+                    input.nextLine();
+
                     System.out.println("Ingrese el nombre del empleado:");
                     nombre= input.nextLine();
                     input.nextLine();
@@ -38,7 +40,7 @@ public class TP_2 {
                             System.out.println("Ingrese la cantidad de horas trabajadas");
                             int horasTrabajadas= input.nextInt();
 
-                            Empleado empPorHoras= new EmpleadoPorHoras(nombre,salario, horasTrabajadas)
+                            Empleado empPorHoras= new EmpleadoPorHoras(nombre,salario, horasTrabajadas);
 
                             System.out.println("El salario por mes del empleado es "+empPorHoras.calcularPago());
                             break;
@@ -60,6 +62,29 @@ public class TP_2 {
                     }
                     break;
                 case 2:
+
+                    Autor autor1 = new Autor("Joshua","Bloch","joshua@email.com", 'M' );
+
+                    System.out.println(autor1);
+
+                    Libro libro1 = new Libro("Effective Java",450,150, autor1);
+
+                    System.out.println(libro1);
+
+                    libro1.setPrecio(500);
+
+                    System.out.println(libro1);
+
+                    libro1.setStock(libro1.getStock()+50);
+
+                    System.out.println(libro1);
+
+                    System.out.println(libro1.getAutor());
+
+                    System.out.println(libro1.mostrarInfoConsigna());
+
+
+
                     break;
                 case 3:
                     break;

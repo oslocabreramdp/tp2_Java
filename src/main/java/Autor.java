@@ -1,4 +1,4 @@
-public class Autor extends Object{
+public class Autor{
 
     private String nombre;
     private String apellido;
